@@ -1,56 +1,81 @@
 [
     {
-      "Title": "The Catcher in the Rye",
-      "Author": "J.D Salinger",
-      "ISBN": "978-0316769488",
-      "publication_year": "1953",
-      "Availability": "Available",
-      "Genre": "Fiction",
-      "------": "------"
+        "Title": "The Catcher in the Rye",
+        "Author": "J.D Salinger",
+        "ISBN": "978-0316769488",
+        "Genre": "Fiction",
+        "Price": "2560"
     },
     {
-      "Title": "To Kill a Mockingbird",
-      "Author": "Harper Lee",
-      "ISBN": "978-0061120084",
-      "publication_year": "1960",
-      "Availability": "Available",
-      "Genre": "Romance",
-      "------": "------"
+        "Title": "To Kill a Mockingbird",
+        "Author": "Harper Lee",
+        "ISBN": "978-0061120084",
+        "Genre": "Romance",
+        "Price": "2560"
     },
     {
-      "Title": "The Hobbit",
-      "Author": "J.R.R Tolkien",
-      "ISBN": "978-0618002214",
-      "publication_year": "1837",
-      "Availability": "Available",
-      "Genre": "Fantasy",
-      "------": "------"
+        "Title": "The Hobbit",
+        "Author": "J.R.R Tolkien",
+        "ISBN": "978-0618002214",
+        "Genre": "Fantasy",
+        "Price": "3004"
     },
     {
-      "Title": "Sapiens History of Humankind ",
-      "Author": "Yuval Noah Harari",
-      "ISBN": "978-0062316097",
-      "publication_year": "2011",
-      "Availability": "Available",
-      "Genre": "Non-Fiction",
-      "------": "------"
+        "Title": "Sapiens History of Humankind ",
+        "Author": "Yuval Noah Harari",
+        "ISBN": "978-0062316097",
+        "Genre": "Non-Fiction",
+        "Price": "2560"
     },
     {
-      "Title": "The Da Vinci Code",
-      "Author": "Dan Brown",
-      "ISBN": "978-0307474278",
-      "publication_year": "2003",
-      "Availability": "Checked Out",
-      "Genre": "Mystery",
-      "------": "------"
+        "Title": "The Da Vinci Code",
+        "Author": "Dan Brown",
+        "ISBN": "978-0307474278",
+        "Availability": "Checked Out",
+        "Genre": "Mystery",
+        "Price": "9999"
     },
     {
-      "Title": "Horry Pater",
-      "Author": "Ngoawe",
-      "ISBN": "978-0290846512",
-      "publication_year": "1901",
-      "Availability": "Available",
-      "Genre": "Non-Fiction",
-      "------": "------"
+        "Title": "Horry Pater",
+        "Author": "Ngoawe",
+        "ISBN": "978-0290846512",
+        "Genre": "Non-Fiction",
+        "Price": "2560"
+    },
+    {
+        "Seller": "Nowell",
+        "Title": "The One",
+        "Author": "nowellss",
+        "ISBN": "978-00000",
+        "Genre": "Fantasy",
+        "Price": "2000",
+        "------": "------"
+    },
+    {
+        "Seller": "Nowell",
+        "Title": "The One",
+        "Author": "nowellss",
+        "ISBN": "978-00000",
+        "Genre": "Fantasy",
+        "Price": "2000",
+        "------": "------"
+    },
+    {
+        "Seller": "Nowell",
+        "Title": "The One",
+        "Author": "nowellss",
+        "ISBN": "978-00000",
+        "Genre": "Fantasy",
+        "Price": "2000",
+        "------": "------"
+    },
+    {
+        "Seller": "Nowell",
+        "Title": "The One",
+        "Author": "nowellss",
+        "ISBN": "978-00000",
+        "Genre": "Fantasy",
+        "Price": "2000",
+        "------": "------"
     }
-  ]
+]
