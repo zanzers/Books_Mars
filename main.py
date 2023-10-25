@@ -66,8 +66,45 @@ class Book(Mars_Books):
 # NOWELL PART END HERE!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 # MARK & Marcelot PART START HERE!!!!!!!!!!!!!!!!!!!!!!!!!!
+class Customer(Book):
+    def __init__(self, json_file, customer_json,customer_id, customer_name, customer_address):
+        self.customer_id = customer_id
+        self.customer_name = customer_name
+        self.customer_address = customer_address
+        self.customer_jason = customer_json
+        self.cart = []
 
-     
+    def customer_info(self):
+        print(f"Your ID: {self.customer_id}")
+        print("----------------------------")
+        print(f"Welcome: {self.customer_name}")
+        print("----------------------------")
+        print(f"home Address: {self.customer_address}")
+        print("----------------------------")
+
+    def add_cart(self, book_title):
+        self.cart.append(book_title)
+        print(f"You add {book_title} in your cart")
+        print("----------------------------")
+
+    def sava_customer(self):
+        customer_data ={
+            "id": self.customer_id,
+            "Name": self.customer_address,
+            "Address": self.customer_address,
+        }
+        with open(self.customer_jason, 'w') as file:
+            json.dump(customer_data, file, indent=4)
+
+    def view_cart(self):
+        print("Shopping List")
+        for item in self.cart:
+            print(item)
+            print("----------------------------")
+
+
+
+
 # MARK & Marcelot PART END HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 # MARK VEL START HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -80,193 +117,29 @@ class Book(Mars_Books):
 # DREWW START END HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 list_book = Mars_Books('books.json')
-new_book = {
-        "Title": "Marcelo: The Baho Boy",
-        "Author": "Marcelo Mabaho",
-        "ISBN": "978-0316769488",
-        "Genre": "Fiction",
-        "Price": "2560"
-}
-list_book.addBook(new_book)
-book_in = Book('book.json')
-book_in.display()
+customer_json = "customer_json"
+#new_book = {
+        #"Title": "Marcelo: The Baho Boy",
+        #"Author": "Marcelo Mabaho",
+        #"ISBN": "978-0316769488",
+        #"Genre": "Fiction",
+        #"Price": "2560"
+#}
+#list_book.addBook(new_book)
+#book_in = Book('book.json')
+#book_in.display()
+
+customer1_id = '1'
+customer1_name = 'Nowell'
+customer1_address = 'BBx Sky at Night Magazine, Eagle House, Bristol, BS1 4ST, United Kingdom'
+customer1 = Customer(list_book, customer_json, customer1_id, customer1_name, customer1_address)
+
+customer1.customer_info()
+customer1.add_cart("The Catcher in the Rye")
+customer1.view_cart()
+customer1.sava_customer()
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-customer1= Customer(list_book,customer_json)
 
