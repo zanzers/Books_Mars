@@ -102,7 +102,37 @@ class Customer(Book):
             print(item)
             print("----------------------------")
 
+    def remove(self, book_title):
+        if book_title in self.cart:
+            self.cart.remove(book_title)
+            print(f"The Book {book_title} are been remove in your cart.")
+        else:
+            print(f"The {book_title} was not found in your cart!")
 
+    def calculate_total_price(self):
+        books = self.read_book()
+        total_price = 0
+        for title in self.cart:
+            for book in books:
+                if title == book.get('Title'):
+                    price = float(book.get('Price', 0))
+                    total_price += price
+        return total_price
+
+    def empty_cart(self):
+        return not bool(self.cart)
+
+    def checkout(self):
+        if not self.empty_cart():
+            print("Checkout Details")
+            for item in self.cart:
+                print(item)
+            total_price = self.calculate_total_price()
+            print("----------------------------")
+            print(f"Total Price: {total_price:.2f}")
+            print(f"Matamang Salamat")
+        else:
+            print("Your cart is empty")
 
 
 # MARK & Marcelot PART END HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -139,7 +169,8 @@ customer1.add_cart("The Catcher in the Rye")
 customer1.view_cart()
 customer1.sava_customer()
 
+customer1.checkout()
+customer1.remove("The Catcher in the Rye")
 
-
-
+customer1.checkout()
 
