@@ -77,5 +77,13 @@
         "Genre": "Fantasy",
         "Price": "2000",
         "------": "------"
+    },
+    {
+        "Title": "TEST_TELA",
+        "Author": "Ngoawe",
+        "ISBN": "978-111111111",
+        "publication_year": "1901",
+        "Availability": "Checked Out",
+        "Genre": "Non-Fiction"
     }
 ]
