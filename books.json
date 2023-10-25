@@ -85,5 +85,12 @@
         "publication_year": "1901",
         "Availability": "Checked Out",
         "Genre": "Non-Fiction"
+    },
+    {
+        "Title": "Marcelo: The Baho Boy",
+        "Author": "Marcelo Mabaho",
+        "ISBN": "978-0316769488",
+        "Genre": "Fiction",
+        "Price": "2560"
     }
 ]
