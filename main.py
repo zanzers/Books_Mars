@@ -61,6 +61,20 @@ class Book(Mars_Books):
 # MARK VEL START END HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 # DREWW START HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+class Shipping (Customer):
+
+    def __init__ (self, json_file, customer_json, customer_id, customer_name, customer_address, payment_method):
+        super().__init__(json_file, customer_json, customer_id, customer_name, customer_address)
+        self.payment = payment_method
+
+
+    def payment_display(self):
+        print(f"Your Order is Shipping")
+        print(f"Name: {customer1_name}")
+        print(f"Address: {customer_address}")
+        print(f"Patment method: {self.payment}")
+
+        super() .Checkout()
 
 # DREWW START END HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 list_book = Mars_Books('books.json')
