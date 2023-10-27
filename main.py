@@ -143,11 +143,21 @@ class Customer(Book):
 # MARK VEL START END HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 # DREWW START HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+class Shipping (Customer):
+    def __init__ (self, json_file, customer_json, customer_id, customer_name, customer_address, payment_method):
+        super().__init__(json_file, customer_json, customer_id, customer_name, customer_address)
+        self.payment = payment_method
+
+    def payment_display(self):
+        print(f"Your Order is Shipping")
+        print(f"Name: {customer1_name}")
+        print(f"Address: {customer1_address}")
+        print(f"Payment method: {self.payment}")
 
 # DREWW START END HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 list_book = Mars_Books('books.json')
-customer_json = "customer_json"
+customer_json = "customer.json"
 #new_book = {
         #"Title": "Marcelo: The Baho Boy",
         #"Author": "Marcelo Mabaho",
@@ -156,8 +166,8 @@ customer_json = "customer_json"
         #"Price": "2560"
 #}
 #list_book.addBook(new_book)
-#book_in = Book('book.json')
-#book_in.display()
+book_in = Book('book.json')
+book_in.display()
 
 customer1_id = '1'
 customer1_name = 'Nowell'
@@ -165,12 +175,14 @@ customer1_address = 'BBx Sky at Night Magazine, Eagle House, Bristol, BS1 4ST, U
 customer1 = Customer(list_book, customer_json, customer1_id, customer1_name, customer1_address)
 
 customer1.customer_info()
-customer1.add_cart("The Catcher in the Rye")
+customer1.add_cart("To Kill")
 customer1.view_cart()
 customer1.sava_customer()
 
-customer1.checkout()
-customer1.remove("The Catcher in the Rye")
+# customer1.remove("The Catcher in the Rye")
 
-customer1.checkout()
 
+payment = "COD"
+ship = Shipping(list_book, customer_json,customer1_id, customer1_name, customer1_address, payment)
+ship.payment_display()
+customer1.checkout()
