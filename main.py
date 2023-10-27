@@ -38,6 +38,34 @@ class Mars_Books:
      
 #   NOWELL PART START HERE!!!!!!!!!!!!
 # Mark START HERE!!!!!!!!!!!!!!
+class Seller(Mars_Books): 
+    def __init__(self, json_file,seller_name, title,author,isbn,genre,price):
+      super().__init__(json_file)
+      self.seller = seller_name 
+      self.title = title
+      self.author = author 
+      self.isbn = isbn 
+      self.genre = genre
+      self.price = price
+    def seller_add(self):
+      new_add_book ={ "Seller": self.seller, 
+                     "Title": self.title, 
+                     "Author": self.author , 
+                     "ISBN": self.isbn, 
+                     "Genre": self.genre,
+                     "Price": self.price, }
+      self.addBook(new_add_book)
+    def removeSeller_book(self, remove_isbn_num): 
+      self.remove(remove_isbn_num) 
+    def seller_display(self):
+      print(f"Seller Name: {self.seller}")
+      books = self.read_book() 
+      seller_book = [book for book in books if book.get("Seller") == self.seller] 
+      for book in seller_book:
+       book_info = f"Title: {book['Title']}, Author: {book['Author']}, ISBN: {book['ISBN']}, Price: ${book['Price']}"
+      print(book_info)
+
+
 
 # Mark PART END HERE!!!!!!!!!!!!!!
 
@@ -186,3 +214,8 @@ payment = "COD"
 ship = Shipping(list_book, customer_json,customer1_id, customer1_name, customer1_address, payment)
 ship.payment_display()
 customer1.checkout()
+
+
+seller1 = Seller('book.json',"Nowell","The One","nowellss","978-00000","Fantasy","2000" )
+seller1.seller_add()
+seller1.seller_display()
